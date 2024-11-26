@@ -1,0 +1,142 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Main Background */
+.main_box {
+  background: url("photo.jpg") no-repeat center center fixed;
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+}
+
+/* Hide the Checkbox (Toggle) */
+#check {
+  display: none;
+}
+
+/* Hamburger Button (Open Sidebar) */
+.btn_one {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 700;
+  position: absolute;
+  left: 20px; /* Positioned to align with sidebar */
+  top: 20px;
+  cursor: pointer;
+  z-index: 2; /* Ensures it stays above sidebar when closed */
+}
+
+/* Sidebar Menu */
+.sidebar_menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 250px;
+  background-color: rgba(0, 0, 0, 0.85);
+  transform: translateX(-250px); /* Hidden by default */
+  transition: transform 0.3s ease;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px; /* Space at the top */
+}
+
+/* Show Sidebar When Checkbox is Checked */
+#check:checked ~ .sidebar_menu {
+  transform: translateX(0);
+}
+
+/* Logo Section */
+.sidebar_menu .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 0;
+  background-color: transparent;
+}
+
+.sidebar_menu .logo a {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar_menu .logo a i {
+  margin-right: 10px; /* Space between icon and text */
+}
+
+/* Close Button (Right Aligned) */
+.sidebar_menu .btn_two {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: gray;
+  font-size: 25px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+/* Menu Items */
+.sidebar_menu .menu {
+  color: #ffffff;
+  width: 100%;
+  margin-top: 40px; /* Spacing below logo */
+}
+
+.sidebar_menu .menu ul {
+  list-style: none;
+}
+
+.sidebar_menu .menu li {
+  padding: 14px 20px;
+}
+
+.sidebar_menu .menu li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  
+}
+
+.sidebar_menu .menu li a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffdd57;
+}
+
+.sidebar_menu .menu li i {
+  margin-right: 12px;
+  font-size: 18px;
+}
+
+/* Social Media Links */
+.sidebar_menu .social_media {
+  margin-top: auto;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.sidebar_menu .social_media a {
+  color: white;
+  opacity: 0.7;
+  font-size: 20px;
+  text-decoration: none;
+  margin: 0 8px;
+  transition: opacity 0.3s, color 0.3s;
+}
+
+.sidebar_menu .social_media a:hover {
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
